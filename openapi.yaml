@@ -1,0 +1,30 @@
+openapi: 3.0.0
+info:
+  title: API Sisnetuno
+  description: API RESTFULL do Ambiente de Informacoes Gerenciais - SISNETUNO
+  contact:
+    name: DAdM - Sisnetuno
+    url: https://sisnetuno.dadm.mb/
+    email: programanetuno@marinha.mil.br
+  license:
+    name: Diretoria de Administracao da Marinha - DAdM
+  version: '1.0'
+servers:
+  - url: /api/sisnetuno/v1
+  - url: /api/anemar/v1
+  - url: /api/sapiens/v1
+    description: ''
+paths:
+  /v1/lista:
+    get:
+      summary: Listar OM
+      description: operacao REST
+      security: []
+      tags:
+        - Listar OM
+      operationId: getSomething
+      responses:
+        '204':
+          description: Indica que a solicitacao foi bem-sucedida.
+        '500':
+          description: Indica que a solicitacao falhou.
